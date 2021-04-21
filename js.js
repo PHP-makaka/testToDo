@@ -24,7 +24,7 @@ function addNewItem(e) {
             text:$taskText.value,
         }
         sendRequest('POST', requestURL,bodySend)
-            .then((data)=> upload(bodySend.text))
+            .then((data)=> upload(bodySend.text,data.id))
             .catch((er)=>console.log(er))
 
         // let node = document.createElement("LI");
@@ -42,10 +42,21 @@ function addNewItem(e) {
     if (eventChek.delete_Task($target)) {
         let target = e.target;
         target.className = "deleteTask"
+        let bodySend ={
+            text:target.value,
+            id:target.id
+        }
+console.log(bodySend)
+        sendRequest('POST', requestURL,bodySend)
+            .then((data)=>console.log(data))
+            .catch((er)=>console.log(er))
+
+
         setTimeout(() => target.parentNode.removeChild(target), 500)
     } else if (eventChek.complited_Task($target)) {
         let target = e.target;
         // console.log(e)
+
         target.innerText += " -Complited"
         target.className = "taskComplited"
     }

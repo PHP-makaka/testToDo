@@ -14,8 +14,8 @@ function authorization(e){
         sendRequest('GET', requestURL)
             .then((data)=> drow(JSON.parse(data)))
             .catch((er)=>console.log(er))
-         console.log(name)
-        
+         // console.log(name)
+
         $inputName.value=""
     }else {
         $inputName.value=""
