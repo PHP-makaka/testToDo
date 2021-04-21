@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#page {
+    width: 50%;
+    background-color: #676767;
+    margin: 0 auto 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.startPage {
+    width: 100%;
+    height: 100%;
+    background-color: #9f593f;
+    position: absolute;
+    display: flex;
+z-index: -1;
+    justify-content: center;
+}
+
+.containerPage {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+}
+
+.nonePage {
+    display: none;
+}
+
+ul {
+    list-style: none;
+    background-color: white;
+}
+
+li {
+    background-color: #ec8b68;
+    color: #fff;
+    border-top: 1px solid #fe9772;
+    border-bottom: 1px solid #9f593f;
+    font-size: 24px;
+    letter-spacing: .05em;
+    list-style-type: none;
+    text-shadow: 2px 2px 1px #9f593f;
+    height: 50px;
+    position: relative;
+    padding-left: 1em;
+    padding-top: 10px;
+    z-index: 2;
+
+}
+
+input[type='text'] {
+    background-color: #e2e2e2;
+    color: #333;
+    font-size: 24px;
+    width: 60%;
+    padding: 4px 6px;
+    margin: 10px;
+    appearance: textfield;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+.search-btn {
+    background: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    margin: 5px;
+    transition: width 0.2s;
+}
+.submitName{
+    background: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    margin: 5px;
+    transition: width 0.2s;
+}
+
+.search-btn:hover,
+.submitName:hover{
+    width: 120px;
+}
+
+@keyframes newTaskApead {
+    from {
+        opacity: 0;
+        left: -100%;
+    }
+    to {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+.newTask {
+    background: url("img/newTask.png") no-repeat;
+    background-size: 55px;
+    background-position: 95% 1px;
+    background-color: #ec8b68;
+    color: #8be3db;
+    animation-name: newTaskApead;
+    animation-duration: 1s;
+    transform: rotateX(0deg);
+    top: 0;
+    position: relative;
+    transition: top 0.5s;
+}
+
+.newTask:hover {
+    top: 0px;
+    font-weight: bold;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+@keyframes complitedTask {
+    from {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+    to {
+        opacity: 0.4;
+        transform: rotateX(360deg);
+    }
+}
+
+.taskComplited {
+    background: url("img/complited.png") no-repeat;
+    background-color: #ec8b68;
+
+    background-size: 55px;
+    background-position: 95% 1px;
+    color: red;
+    opacity: 0.4;
+    border: solid 0.5px black;
+    animation-name: complitedTask;
+    animation-duration: 1s;
+    cursor: crosshair;
+}
+
+@keyframes deleteTask {
+    from {
+        left: 0;
+    }
+    to {
+        left: -200%;
+    }
+}
+
+.deleteTask {
+    color: red;
+    opacity: 0.4;
+    animation-name: deleteTask;
+    animation-duration: 1s;
+}

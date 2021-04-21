@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDoApp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="startPage" id="startPage">
+    <div class="containerPage ">
+        <input type="text" name="" autofocus id="name" placeholder="Введите имя">
+        <button class="submitName" id="submitName">
+            OK
+        </button>
+    </div>
+</div>
+<div id="page" class="nonePage">
+    <h1>ToDoApp</h1>
+    <h2>Create item:</h2>
+    <form>
+
+        <input type="text" autofocus id="userTask" class="input" placeholder="..."/>
+        <div id="feedback"></div>
+        <button class="search-btn">
+            OK
+        </button>
+
+    </form>
+    <ul id='list'>
+    </ul>
+</div>
+
+<script src="authorization.js"></script>
+<script src="drow.js"></script>
+<script src="sendReqest.js"></script>
+<script src="checkEvent.js"></script>
+<script src="list_Item.js"></script>
+<script src="js.js"></script>
+
+</body>
+</html>
