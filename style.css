@@ -179,3 +179,9 @@ input[type='text'] {
     animation-name: deleteTask;
     animation-duration: 0.5s;
 }
+
+@media screen and (max-width: 800px) {
+    #page{
+        width: 100%;
+    }
+}
