@@ -110,7 +110,7 @@ input[type='text'] {
     }
 }
 
-.newTask {
+.new {
     background: url("img/newTask.png") no-repeat;
     background-size: 55px;
     background-position: 95% 1px;
@@ -124,7 +124,7 @@ input[type='text'] {
     transition: top 0.5s;
 }
 
-.newTask:hover {
+.new:hover {
     top: 0px;
     font-weight: bold;
     font-size: 26px;
@@ -158,16 +158,24 @@ input[type='text'] {
 
 @keyframes deleteTask {
     from {
-        left: 0;
+        font-size: 24px;
+        height: 60px;
     }
     to {
-        left: -200%;
+        top: 0;
+
+        font-size: 0px;
+        height:10px ;
     }
 }
 
 .deleteTask {
     color: red;
     opacity: 0.4;
+    font-size: 0px;
+    position: relative;
+    height:0px ;
+    z-index: 2;
     animation-name: deleteTask;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
 }
