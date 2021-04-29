@@ -19,25 +19,30 @@
         </button>
     </div>
 </div>
-<div id="page" class="nonePage">
-    <h1>ToDoApp</h1>
-    <h2>Create item:</h2>
-    <form>
+<div class="nonePage" id="containerTask">
+    <div id="page" class="mainPage" >
+        <h1>ToDoApp</h1>
+        <h2>Create item:</h2>
+        <form>
 
-        <input type="text"  autofocus id="userTask" data-idServ="" readonl class="input"  placeholder="..."/>
-        <div id="feedback"></div>
-        <button class="search-btn">
-            OK
-        </button>
+            <input type="text" autofocus id="userTask" data-idServ="" readonl class="input" placeholder="..."/>
+            <div id="feedback"></div>
+            <button class="search-btn" id="submitTask" >
+                OK
+            </button>
 
-    </form>
-    <ul id='list'>
-    </ul>
+        </form>
+
+    </div>
+    <div class="tasks">
+        <ul id='list'>
+        </ul>
+    </div>
 </div>
-
+<script src="js/task_List.js"></script>
+<script src="js/task.js"></script>
 <script src="js/authorization.js"></script>
-<script src="js/changeInpyt.js"></script>
-<script src="js/drow.js"></script>
+<script src="js/saveLastChangeInput.js"></script>
 <script src="js/sendReqest.js"></script>
 <script src="js/checkEvent.js"></script>
 <script src="js/main.js"></script>
